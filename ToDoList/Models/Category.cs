@@ -5,26 +5,16 @@ namespace ToDoList.Models
   public class Category
   {
     private static List<Category> _instances = new List<Category> {};
-    private string _name;
-    private int _id;
+    public string Name { get; set; }
+    public int Id { get; }
     private List<Item> _items;
 
     public Category(string categoryName)
     {
-      _name = categoryName;
+      Name = categoryName;
       _instances.Add(this);
-      _id = _instances.Count;
+      Id = _instances.Count;
       _items = new List<Item>{};
-    }
-
-    public string GetName()
-    {
-      return _name;
-    }
-
-    public int GetId()
-    {
-      return _id;
     }
 
     public void AddItem(Item item)

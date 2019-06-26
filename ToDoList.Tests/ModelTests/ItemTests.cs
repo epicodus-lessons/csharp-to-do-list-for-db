@@ -22,36 +22,6 @@ namespace ToDoList.Tests
     }
 
     [TestMethod]
-    public void GetDescription_ReturnsDescription_String()
-    {
-      //Arrange
-      string description = "Walk the dog.";
-      Item newItem = new Item(description);
-
-      //Act
-      string result = newItem.GetDescription();
-
-      //Assert
-      Assert.AreEqual(description, result);
-    }
-
-    [TestMethod]
-    public void SetDescription_SetDescription_String()
-    {
-      //Arrange
-      string description = "Walk the dog.";
-      Item newItem = new Item(description);
-
-      //Act
-      string updatedDescription = "Do the dishes";
-      newItem.SetDescription(updatedDescription);
-      string result = newItem.GetDescription();
-
-      //Assert
-      Assert.AreEqual(updatedDescription, result);
-    }
-
-    [TestMethod]
     public void GetAll_ReturnsEmptyList_ItemList()
     {
       //Arrange
@@ -79,20 +49,6 @@ namespace ToDoList.Tests
 
       //Assert
       CollectionAssert.AreEqual(newList, result);
-    }
-
-    [TestMethod]
-    public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
-    {
-      //Arrange
-      string description = "Walk the dog.";
-      Item newItem = new Item(description);
-
-      //Act
-      int result = newItem.GetId();
-
-      //Assert
-      Assert.AreEqual(1, result);
     }
 
     [TestMethod]

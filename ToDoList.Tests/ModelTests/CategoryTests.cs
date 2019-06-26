@@ -22,34 +22,6 @@ namespace ToDoList.Tests
     }
 
     [TestMethod]
-    public void GetName_ReturnsName_String()
-    {
-      //Arrange
-      string name = "Test Category";
-      Category newCategory = new Category(name);
-
-      //Act
-      string result = newCategory.GetName();
-
-      //Assert
-      Assert.AreEqual(name, result);
-    }
-
-    [TestMethod]
-    public void GetId_ReturnsCategoryId_Int()
-    {
-      //Arrange
-      string name = "Test Category";
-      Category newCategory = new Category(name);
-
-      //Act
-      int result = newCategory.GetId();
-
-      //Assert
-      Assert.AreEqual(1, result);
-    }
-
-    [TestMethod]
     public void GetAll_ReturnsAllCategoryObjects_CategoryList()
     {
       //Arrange
